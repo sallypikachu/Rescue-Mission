@@ -43,3 +43,586 @@ Processing by QuestionsController#show as HTML
   Rendered questions/show.html.erb within layouts/application (0.6ms)
 Completed 200 OK in 62ms (Views: 4.9ms | ActiveRecord: 0.4ms)
   [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "questions" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "01234567890012345678900123456789001234567890"], ["description", "012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890"], ["created_at", "2015-12-15 18:40:46.958721"], ["updated_at", "2015-12-15 18:40:46.958721"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/questions" for 127.0.0.1 at 2015-12-15 13:40:47 -0500
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (1.6ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 297ms (Views: 281.2ms | ActiveRecord: 1.6ms)
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "questions" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "01234567890012345678900123456789001234567890"], ["description", "012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890"], ["created_at", "2015-12-15 18:40:47.402499"], ["updated_at", "2015-12-15 18:40:47.402499"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/questions" for 127.0.0.1 at 2015-12-15 13:40:47 -0500
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms)
+Started GET "/questions/6" for 127.0.0.1 at 2015-12-15 13:40:47 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  Rendered questions/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 31ms (Views: 4.9ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/questions" for 127.0.0.1 at 2015-12-15 13:40:47 -0500
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "questions" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "01234567890012345678900123456789001234567890"], ["description", "012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890"], ["created_at", "2015-12-15 18:40:47.456093"], ["updated_at", "2015-12-15 18:40:47.456093"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "questions" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "01234567890012345678900123456789001234567890"], ["description", "012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890"], ["created_at", "2015-12-15 18:41:43.002437"], ["updated_at", "2015-12-15 18:41:43.002437"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/questions" for 127.0.0.1 at 2015-12-15 13:41:43 -0500
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (1.5ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 236ms (Views: 219.8ms | ActiveRecord: 1.5ms)
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "questions" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "01234567890012345678900123456789001234567890"], ["description", "012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890"], ["created_at", "2015-12-15 18:41:43.273480"], ["updated_at", "2015-12-15 18:41:43.273480"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/questions" for 127.0.0.1 at 2015-12-15 13:41:43 -0500
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+Started GET "/questions/9" for 127.0.0.1 at 2015-12-15 13:41:43 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  Rendered questions/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 14ms (Views: 4.7ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "questions" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "01234567890012345678900123456789001234567890"], ["description", "012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890"], ["created_at", "2015-12-15 18:41:43.304548"], ["updated_at", "2015-12-15 18:41:43.304548"]]
+  [1m[35m (0.7ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/questions" for 127.0.0.1 at 2015-12-15 13:41:43 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.5ms)
+Started GET "/questions/10" for 127.0.0.1 at 2015-12-15 13:41:43 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 10]]
+  Rendered questions/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "questions" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "01234567890012345678900123456789001234567890"], ["description", "012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890"], ["created_at", "2015-12-15 18:45:42.622758"], ["updated_at", "2015-12-15 18:45:42.622758"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/questions" for 127.0.0.1 at 2015-12-15 13:45:42 -0500
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (1.5ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 234ms (Views: 217.8ms | ActiveRecord: 1.5ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "questions" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "01234567890012345678900123456789001234567890"], ["description", "012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890"], ["created_at", "2015-12-15 18:45:42.891062"], ["updated_at", "2015-12-15 18:45:42.891062"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/questions" for 127.0.0.1 at 2015-12-15 13:45:42 -0500
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+Started GET "/questions/12" for 127.0.0.1 at 2015-12-15 13:45:42 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered questions/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 14ms (Views: 4.7ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "questions" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "01234567890012345678900123456789001234567890"], ["description", "012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890"], ["created_at", "2015-12-15 18:45:42.921176"], ["updated_at", "2015-12-15 18:45:42.921176"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/questions" for 127.0.0.1 at 2015-12-15 13:45:42 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "questions" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "01234567890012345678900123456789001234567890"], ["description", "012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890"], ["created_at", "2015-12-15 18:46:26.662025"], ["updated_at", "2015-12-15 18:46:26.662025"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/questions" for 127.0.0.1 at 2015-12-15 13:46:26 -0500
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (1.5ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 233ms (Views: 216.2ms | ActiveRecord: 1.5ms)
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "questions" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "01234567890012345678900123456789001234567890"], ["description", "012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890"], ["created_at", "2015-12-15 18:46:26.930801"], ["updated_at", "2015-12-15 18:46:26.930801"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/questions" for 127.0.0.1 at 2015-12-15 13:46:26 -0500
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+Started GET "/questions/15" for 127.0.0.1 at 2015-12-15 13:46:26 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  Rendered questions/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 14ms (Views: 4.9ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "questions" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "01234567890012345678900123456789001234567890"], ["description", "012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890"], ["created_at", "2015-12-15 18:46:26.961782"], ["updated_at", "2015-12-15 18:46:26.961782"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/questions" for 127.0.0.1 at 2015-12-15 13:46:26 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.5ms)
+Started GET "/questions/16" for 127.0.0.1 at 2015-12-15 13:46:26 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 16]]
+  Rendered questions/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms)
+Started GET "/questions/16/edit" for 127.0.0.1 at 2015-12-15 13:46:26 -0500
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  Rendered questions/edit.html.erb within layouts/application (93.3ms)
+Completed 200 OK in 98ms (Views: 97.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "questions" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "01234567890012345678900123456789001234567890"], ["description", "012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890"], ["created_at", "2015-12-15 18:47:25.046435"], ["updated_at", "2015-12-15 18:47:25.046435"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/questions" for 127.0.0.1 at 2015-12-15 13:47:25 -0500
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (1.5ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 237ms (Views: 219.1ms | ActiveRecord: 1.5ms)
+  [1m[36m (1.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "questions" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "01234567890012345678900123456789001234567890"], ["description", "012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890"], ["created_at", "2015-12-15 18:47:25.319736"], ["updated_at", "2015-12-15 18:47:25.319736"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/questions" for 127.0.0.1 at 2015-12-15 13:47:25 -0500
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.6ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+Started GET "/questions/18" for 127.0.0.1 at 2015-12-15 13:47:25 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 18]]
+  Rendered questions/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 14ms (Views: 4.7ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.6ms)[0m  [1mINSERT INTO "questions" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "01234567890012345678900123456789001234567890"], ["description", "012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890"], ["created_at", "2015-12-15 18:47:25.350177"], ["updated_at", "2015-12-15 18:47:25.350177"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/questions" for 127.0.0.1 at 2015-12-15 13:47:25 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.5ms)
+Started GET "/questions/19" for 127.0.0.1 at 2015-12-15 13:47:25 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 19]]
+  Rendered questions/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.5ms)
+Started GET "/questions/19/edit" for 127.0.0.1 at 2015-12-15 13:47:25 -0500
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  Rendered questions/edit.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.4ms)
+Started PATCH "/questions/19" for 127.0.0.1 at 2015-12-15 13:47:25 -0500
+Processing by QuestionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "question"=>{"title"=>"Failure", "description"=>"012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890"}, "commit"=>"Submit Changes", "id"=>"19"}
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 19]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered questions/edit.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 8ms (Views: 3.9ms | ActiveRecord: 0.8ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "questions" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "01234567890012345678900123456789001234567890"], ["description", "012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890"], ["created_at", "2015-12-15 18:49:21.259007"], ["updated_at", "2015-12-15 18:49:21.259007"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/questions" for 127.0.0.1 at 2015-12-15 13:49:21 -0500
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (1.5ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 238ms (Views: 220.7ms | ActiveRecord: 1.5ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "questions" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "01234567890012345678900123456789001234567890"], ["description", "012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890"], ["created_at", "2015-12-15 18:49:21.532463"], ["updated_at", "2015-12-15 18:49:21.532463"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/questions" for 127.0.0.1 at 2015-12-15 13:49:21 -0500
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.5ms)
+Started GET "/questions/21" for 127.0.0.1 at 2015-12-15 13:49:21 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  Rendered questions/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 14ms (Views: 4.8ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "questions" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "01234567890012345678900123456789001234567890"], ["description", "012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890"], ["created_at", "2015-12-15 18:49:21.562269"], ["updated_at", "2015-12-15 18:49:21.562269"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/questions" for 127.0.0.1 at 2015-12-15 13:49:21 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.5ms)
+Started GET "/questions/22" for 127.0.0.1 at 2015-12-15 13:49:21 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[35mQuestion Load (0.8ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 22]]
+  Rendered questions/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 7ms (Views: 1.9ms | ActiveRecord: 0.8ms)
+Started GET "/questions/22/edit" for 127.0.0.1 at 2015-12-15 13:49:21 -0500
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 22]]
+  Rendered questions/edit.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.4ms)
+Started PATCH "/questions/22" for 127.0.0.1 at 2015-12-15 13:49:21 -0500
+Processing by QuestionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "question"=>{"title"=>"Failure", "description"=>"012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890"}, "commit"=>"Submit Changes", "id"=>"22"}
+  [1m[35mQuestion Load (0.8ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 22]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered questions/edit.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 8ms (Views: 3.8ms | ActiveRecord: 1.1ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "questions" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "01234567890012345678900123456789001234567890"], ["description", "012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890"], ["created_at", "2015-12-15 18:49:21.670810"], ["updated_at", "2015-12-15 18:49:21.670810"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/questions" for 127.0.0.1 at 2015-12-15 13:49:21 -0500
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.5ms)
+Started GET "/questions/23" for 127.0.0.1 at 2015-12-15 13:49:21 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 23]]
+  Rendered questions/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.4ms)
+Started GET "/questions/23/edit" for 127.0.0.1 at 2015-12-15 13:49:21 -0500
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 23]]
+  Rendered questions/edit.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.4ms)
+Started PATCH "/questions/23" for 127.0.0.1 at 2015-12-15 13:49:21 -0500
+Processing by QuestionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "question"=>{"title"=>"FailureFailureFailureFailureFailureFailureFailureFailureFailureFailure", "description"=>"012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890"}, "commit"=>"Submit Changes", "id"=>"23"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 23]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "questions" SET "title" = $1, "updated_at" = $2 WHERE "questions"."id" = $3[0m  [["title", "FailureFailureFailureFailureFailureFailureFailureFailureFailureFailure"], ["updated_at", "2015-12-15 18:49:21.702230"], ["id", 23]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/questions/23
+Completed 302 Found in 7ms (ActiveRecord: 1.0ms)
+Started GET "/questions/23" for 127.0.0.1 at 2015-12-15 13:49:21 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 23]]
+  Rendered questions/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "questions" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "01234567890012345678900123456789001234567890"], ["description", "012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890"], ["created_at", "2015-12-15 18:56:08.126520"], ["updated_at", "2015-12-15 18:56:08.126520"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/questions" for 127.0.0.1 at 2015-12-15 13:56:08 -0500
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (1.5ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 243ms (Views: 227.4ms | ActiveRecord: 1.5ms)
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "questions" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "01234567890012345678900123456789001234567890"], ["description", "012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890"], ["created_at", "2015-12-15 18:56:08.404722"], ["updated_at", "2015-12-15 18:56:08.404722"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/questions" for 127.0.0.1 at 2015-12-15 13:56:08 -0500
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.5ms)
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 13:56:08 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  Rendered questions/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 14ms (Views: 4.7ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/questions" for 127.0.0.1 at 2015-12-15 13:56:08 -0500
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.8ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.8ms)
+Started GET "/questions/new" for 127.0.0.1 at 2015-12-15 13:56:08 -0500
+Processing by QuestionsController#new as HTML
+  Rendered questions/new.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 27ms (Views: 26.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/questions" for 127.0.0.1 at 2015-12-15 13:56:08 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms)
+Started GET "/questions/new" for 127.0.0.1 at 2015-12-15 13:56:08 -0500
+Processing by QuestionsController#new as HTML
+  Rendered questions/new.html.erb within layouts/application (35.9ms)
+Completed 200 OK in 38ms (Views: 37.5ms | ActiveRecord: 0.0ms)
+Started POST "/questions" for 127.0.0.1 at 2015-12-15 13:56:08 -0500
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "question"=>{"title"=>"FailureFailureFailureFailureFailureFailureFailureFailureFailureFailure", "description"=>"FailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailure"}, "commit"=>"Submit Question"}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "questions" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "FailureFailureFailureFailureFailureFailureFailureFailureFailureFailure"], ["description", "FailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailure"], ["created_at", "2015-12-15 18:56:08.533011"], ["updated_at", "2015-12-15 18:56:08.533011"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/questions
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+Started GET "/questions" for 127.0.0.1 at 2015-12-15 13:56:08 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.6ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "questions" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "01234567890012345678900123456789001234567890"], ["description", "012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890"], ["created_at", "2015-12-15 18:56:08.549873"], ["updated_at", "2015-12-15 18:56:08.549873"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/questions" for 127.0.0.1 at 2015-12-15 13:56:08 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.6ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.6ms)
+Started GET "/questions/27" for 127.0.0.1 at 2015-12-15 13:56:08 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 27]]
+  Rendered questions/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.4ms)
+Started GET "/questions/27/edit" for 127.0.0.1 at 2015-12-15 13:56:08 -0500
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 27]]
+  Rendered questions/edit.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.4ms)
+Started PATCH "/questions/27" for 127.0.0.1 at 2015-12-15 13:56:08 -0500
+Processing by QuestionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "question"=>{"title"=>"Failure", "description"=>"012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890"}, "commit"=>"Submit Changes", "id"=>"27"}
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 27]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered questions/edit.html.erb within layouts/application (33.3ms)
+Completed 200 OK in 40ms (Views: 36.0ms | ActiveRecord: 0.8ms)
+  [1m[36m (3.9ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "questions" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "01234567890012345678900123456789001234567890"], ["description", "012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890"], ["created_at", "2015-12-15 18:56:08.639105"], ["updated_at", "2015-12-15 18:56:08.639105"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/questions" for 127.0.0.1 at 2015-12-15 13:56:08 -0500
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.5ms)
+Started GET "/questions/28" for 127.0.0.1 at 2015-12-15 13:56:08 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mQuestion Load (0.6ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 28]]
+  Rendered questions/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.6ms)
+Started GET "/questions/28/edit" for 127.0.0.1 at 2015-12-15 13:56:08 -0500
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"28"}
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 28]]
+  Rendered questions/edit.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.5ms)
+Started PATCH "/questions/28" for 127.0.0.1 at 2015-12-15 13:56:08 -0500
+Processing by QuestionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "question"=>{"title"=>"FailureFailureFailureFailureFailureFailureFailureFailureFailureFailure", "description"=>"012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890"}, "commit"=>"Submit Changes", "id"=>"28"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 28]]
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "questions" SET "title" = $1, "updated_at" = $2 WHERE "questions"."id" = $3[0m  [["title", "FailureFailureFailureFailureFailureFailureFailureFailureFailureFailure"], ["updated_at", "2015-12-15 18:56:08.679792"], ["id", 28]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/questions/28
+Completed 302 Found in 8ms (ActiveRecord: 1.1ms)
+Started GET "/questions/28" for 127.0.0.1 at 2015-12-15 13:56:08 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 28]]
+  Rendered questions/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "questions" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "01234567890012345678900123456789001234567890"], ["description", "012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890"], ["created_at", "2015-12-15 18:56:47.053854"], ["updated_at", "2015-12-15 18:56:47.053854"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/questions" for 127.0.0.1 at 2015-12-15 13:56:47 -0500
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (1.5ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 233ms (Views: 217.9ms | ActiveRecord: 1.5ms)
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "questions" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "01234567890012345678900123456789001234567890"], ["description", "012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890"], ["created_at", "2015-12-15 18:56:47.322289"], ["updated_at", "2015-12-15 18:56:47.322289"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/questions" for 127.0.0.1 at 2015-12-15 13:56:47 -0500
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.6ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.6ms)
+Started GET "/questions/30" for 127.0.0.1 at 2015-12-15 13:56:47 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  Rendered questions/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 14ms (Views: 4.7ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/questions" for 127.0.0.1 at 2015-12-15 13:56:47 -0500
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.6ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.6ms)
+Started GET "/questions/new" for 127.0.0.1 at 2015-12-15 13:56:47 -0500
+Processing by QuestionsController#new as HTML
+  Rendered questions/new.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 26ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+Started POST "/questions" for 127.0.0.1 at 2015-12-15 13:56:47 -0500
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "question"=>{"title"=>"Failure", "description"=>""}, "commit"=>"Submit Question"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered questions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 8ms (Views: 4.0ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/questions" for 127.0.0.1 at 2015-12-15 13:56:47 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.7ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.7ms)
+Started GET "/questions/new" for 127.0.0.1 at 2015-12-15 13:56:47 -0500
+Processing by QuestionsController#new as HTML
+  Rendered questions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+Started POST "/questions" for 127.0.0.1 at 2015-12-15 13:56:47 -0500
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "question"=>{"title"=>"FailureFailureFailureFailureFailureFailureFailureFailureFailureFailure", "description"=>"FailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailure"}, "commit"=>"Submit Question"}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "questions" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "FailureFailureFailureFailureFailureFailureFailureFailureFailureFailure"], ["description", "FailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailure"], ["created_at", "2015-12-15 18:56:47.465107"], ["updated_at", "2015-12-15 18:56:47.465107"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/questions
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+Started GET "/questions" for 127.0.0.1 at 2015-12-15 13:56:47 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "questions" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "01234567890012345678900123456789001234567890"], ["description", "012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890"], ["created_at", "2015-12-15 18:56:47.481519"], ["updated_at", "2015-12-15 18:56:47.481519"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/questions" for 127.0.0.1 at 2015-12-15 13:56:47 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.5ms)
+Started GET "/questions/32" for 127.0.0.1 at 2015-12-15 13:56:47 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 32]]
+  Rendered questions/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.4ms)
+Started GET "/questions/32/edit" for 127.0.0.1 at 2015-12-15 13:56:47 -0500
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered questions/edit.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.5ms)
+Started PATCH "/questions/32" for 127.0.0.1 at 2015-12-15 13:56:47 -0500
+Processing by QuestionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "question"=>{"title"=>"Failure", "description"=>"012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890"}, "commit"=>"Submit Changes", "id"=>"32"}
+  [1m[35mQuestion Load (0.7ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered questions/edit.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 9ms (Views: 4.4ms | ActiveRecord: 1.2ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "questions" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "01234567890012345678900123456789001234567890"], ["description", "012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890"], ["created_at", "2015-12-15 18:56:47.529905"], ["updated_at", "2015-12-15 18:56:47.529905"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/questions" for 127.0.0.1 at 2015-12-15 13:56:47 -0500
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.5ms)
+Started GET "/questions/33" for 127.0.0.1 at 2015-12-15 13:56:47 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  Rendered questions/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.4ms)
+Started GET "/questions/33/edit" for 127.0.0.1 at 2015-12-15 13:56:47 -0500
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"33"}
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 33]]
+  Rendered questions/edit.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.4ms)
+Started PATCH "/questions/33" for 127.0.0.1 at 2015-12-15 13:56:47 -0500
+Processing by QuestionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "question"=>{"title"=>"FailureFailureFailureFailureFailureFailureFailureFailureFailureFailure", "description"=>"012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890012345678900123456789001234567890"}, "commit"=>"Submit Changes", "id"=>"33"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "questions" SET "title" = $1, "updated_at" = $2 WHERE "questions"."id" = $3[0m  [["title", "FailureFailureFailureFailureFailureFailureFailureFailureFailureFailure"], ["updated_at", "2015-12-15 18:56:47.562096"], ["id", 33]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/questions/33
+Completed 302 Found in 7ms (ActiveRecord: 1.1ms)
+Started GET "/questions/33" for 127.0.0.1 at 2015-12-15 13:56:47 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  Rendered questions/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK

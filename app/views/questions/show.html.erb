@@ -1,5 +1,7 @@
+<h2><%= @message %></h2>
+
 <h1><%= @question.title %></h1>
 <p> <%= @question.description %> </p>
-<ul>
-  <!-- <li></li> -->
-</ul>
+
+<%= link_to "Edit Question", edit_question_path %><br>
+<%= link_to "All Questions", questions_path %>

@@ -1,0 +1,19 @@
+<h2>Submit a new question</h2>
+
+<h2><%= @message %></h2>
+
+<%= form_for(@question) do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_area :description, size: "50x5" %>
+  </p>
+
+  <p>
+    <%= f.submit "Submit Question" %>
+  </p>
+<% end %>
