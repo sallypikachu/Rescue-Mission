@@ -15,8 +15,6 @@ class QuestionsController < ApplicationController
 
   def create
     @question = Question.new(question_params)
-    require 'pry'
-    binding.pry
     if @question.save
       flash.notice = "Question created!"
       redirect_to questions_path
@@ -44,7 +42,6 @@ class QuestionsController < ApplicationController
 
   def destroy
     @question = Question.find(params[:id])
-    binding.pry
     @question.answers.destroy
     @question.destroy
 

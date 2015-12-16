@@ -8165,3 +8165,40 @@ Completed 200 OK in 32ms (Views: 30.6ms | ActiveRecord: 0.5ms)
   [1m[35m (0.4ms)[0m  COMMIT
   [1m[36mAnswer Load (0.9ms)[0m  [1mSELECT  "answers".* FROM "answers"  ORDER BY "answers"."id" ASC LIMIT 1[0m
   [1m[35mAnswer Load (0.5ms)[0m  SELECT "answers".* FROM "answers"
+
+
+Started GET "/questions/new" for ::1 at 2015-12-16 15:04:35 -0500
+Processing by QuestionsController#new as HTML
+  Rendered questions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 44ms (Views: 35.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/questions/3" for ::1 at 2015-12-16 15:04:37 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.3ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Question with 'id'=3):
+  app/controllers/questions_controller.rb:7:in `show'
+
+
+  Rendered /Users/Pikachu/.gem/ruby/2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /Users/Pikachu/.gem/ruby/2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/Pikachu/.gem/ruby/2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/Pikachu/.gem/ruby/2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (100.3ms)
+  Rendered /Users/Pikachu/.gem/ruby/2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (5.3ms)
+  Rendered /Users/Pikachu/.gem/ruby/2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/Pikachu/.gem/ruby/2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/Pikachu/.gem/ruby/2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/Pikachu/.gem/ruby/2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (108.0ms)
+  Rendered /Users/Pikachu/.gem/ruby/2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/Pikachu/.gem/ruby/2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Pikachu/.gem/ruby/2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (214.5ms)
+
+
+Started GET "/questions" for ::1 at 2015-12-16 15:04:42 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.4ms)
