@@ -626,3 +626,133 @@ Processing by QuestionsController#show as HTML
   Rendered questions/show.html.erb within layouts/application (0.5ms)
 Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.3ms)
   [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (118.1ms)[0m  [1mDROP DATABASE IF EXISTS "rescue_mission_test"[0m
+  [1m[35m (480.5ms)[0m  CREATE DATABASE "rescue_mission_test" ENCODING = 'unicode'
+  [1m[36mSQL (2.9ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (12.0ms)[0m  CREATE TABLE "answers" ("id" serial primary key, "question_id" integer NOT NULL, "answer" text NOT NULL, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (5.0ms)[0m  [1mCREATE TABLE "questions" ("id" serial primary key, "title" character varying NOT NULL, "description" text NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (2.9ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (3.2ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.6ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151215213343')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151214194823')
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.8ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "questions" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "FailureFailureFailureFailureFailureFailureFailureFailureFailureFailure"], ["description", "FailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailure"], ["created_at", "2015-12-16 19:30:22.600233"], ["updated_at", "2015-12-16 19:30:22.600233"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/questions/1" for 127.0.0.1 at 2015-12-16 14:30:22 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mQuestion Load (0.6ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "answers" WHERE "answers"."question_id" = $1 LIMIT 1[0m  [["question_id", 1]]
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 1]]
+  Rendered answers/_form.html.erb (26.9ms)
+  Rendered questions/show.html.erb within layouts/application (61.6ms)
+Completed 200 OK in 462ms (Views: 399.0ms | ActiveRecord: 5.6ms)
+  [1m[36m (1.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "questions" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "FailureFailureFailureFailureFailureFailureFailureFailureFailureFailure"], ["description", "FailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailure"], ["created_at", "2015-12-16 19:32:42.002038"], ["updated_at", "2015-12-16 19:32:42.002038"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/questions/2" for 127.0.0.1 at 2015-12-16 14:32:42 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mQuestion Load (0.7ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "answers" WHERE "answers"."question_id" = $1 LIMIT 1[0m  [["question_id", 2]]
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 2]]
+  Rendered answers/_form.html.erb (27.4ms)
+  Rendered questions/show.html.erb within layouts/application (58.6ms)
+Completed 200 OK in 309ms (Views: 261.4ms | ActiveRecord: 4.6ms)
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "questions" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "FailureFailureFailureFailureFailureFailureFailureFailureFailureFailure"], ["description", "FailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailure"], ["created_at", "2015-12-16 19:33:15.839051"], ["updated_at", "2015-12-16 19:33:15.839051"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/questions/3" for 127.0.0.1 at 2015-12-16 14:33:15 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mAnswer Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "answers" WHERE "answers"."question_id" = $1 LIMIT 1[0m  [["question_id", 3]]
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 3]]
+  Rendered answers/_form.html.erb (11.9ms)
+  Rendered questions/show.html.erb within layouts/application (32.9ms)
+Completed 200 OK in 271ms (Views: 233.4ms | ActiveRecord: 3.6ms)
+Started POST "/questions/3/answers" for 127.0.0.1 at 2015-12-16 14:33:16 -0500
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "answer"=>{"answer"=>"short"}, "commit"=>"Submit Answer", "question_id"=>"3"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (1.3ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mAnswer Exists (0.4ms)[0m  SELECT  1 AS one FROM "answers" WHERE "answers"."question_id" = $1 LIMIT 1  [["question_id", 3]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 3]]
+  Rendered answers/_form.html.erb (1.4ms)
+  Rendered questions/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 25ms (Views: 10.1ms | ActiveRecord: 2.7ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "questions" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "FailureFailureFailureFailureFailureFailureFailureFailureFailureFailure"], ["description", "FailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailure"], ["created_at", "2015-12-16 19:37:31.828023"], ["updated_at", "2015-12-16 19:37:31.828023"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/questions/4" for 127.0.0.1 at 2015-12-16 14:37:31 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mQuestion Load (0.6ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mAnswer Exists (0.8ms)[0m  [1mSELECT  1 AS one FROM "answers" WHERE "answers"."question_id" = $1 LIMIT 1[0m  [["question_id", 4]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 4]]
+  Rendered answers/_form.html.erb (25.5ms)
+  Rendered questions/show.html.erb within layouts/application (55.3ms)
+Completed 200 OK in 334ms (Views: 279.3ms | ActiveRecord: 3.6ms)
+Started POST "/questions/4/answers" for 127.0.0.1 at 2015-12-16 14:37:32 -0500
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "answer"=>{"answer"=>"short"}, "commit"=>"Submit Answer", "question_id"=>"4"}
+  [1m[36mQuestion Load (0.6ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mAnswer Exists (0.4ms)[0m  SELECT  1 AS one FROM "answers" WHERE "answers"."question_id" = $1 LIMIT 1  [["question_id", 4]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 4]]
+  Rendered answers/_form.html.erb (1.6ms)
+  Rendered questions/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 26ms (Views: 11.7ms | ActiveRecord: 1.7ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "questions" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "FailureFailureFailureFailureFailureFailureFailureFailureFailureFailure"], ["description", "FailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailureFailure"], ["created_at", "2015-12-16 19:37:32.247236"], ["updated_at", "2015-12-16 19:37:32.247236"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/questions/5" for 127.0.0.1 at 2015-12-16 14:37:32 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mAnswer Exists (0.2ms)[0m  SELECT  1 AS one FROM "answers" WHERE "answers"."question_id" = $1 LIMIT 1  [["question_id", 5]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 5]]
+  Rendered answers/_form.html.erb (1.0ms)
+  Rendered questions/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.8ms)
+Started POST "/questions/5/answers" for 127.0.0.1 at 2015-12-16 14:37:32 -0500
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "answer"=>{"answer"=>"Sufficiently long answer.Sufficiently long answer.Sufficiently long answer.Sufficiently long answer.Sufficiently long answer.Sufficiently long answer.Sufficiently long answer.Sufficiently long answer."}, "commit"=>"Submit Answer", "question_id"=>"5"}
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "answers" ("question_id", "answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["question_id", 5], ["answer", "Sufficiently long answer.Sufficiently long answer.Sufficiently long answer.Sufficiently long answer.Sufficiently long answer.Sufficiently long answer.Sufficiently long answer.Sufficiently long answer."], ["created_at", "2015-12-16 19:37:32.263894"], ["updated_at", "2015-12-16 19:37:32.263894"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/questions/5
+Completed 302 Found in 5ms (ActiveRecord: 1.3ms)
+Started GET "/questions/5" for 127.0.0.1 at 2015-12-16 14:37:32 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mAnswer Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "answers" WHERE "answers"."question_id" = $1 LIMIT 1[0m  [["question_id", 5]]
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 5]]
+  Rendered answers/_form.html.erb (1.0ms)
+  Rendered questions/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.8ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m

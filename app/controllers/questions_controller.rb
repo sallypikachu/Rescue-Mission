@@ -1,12 +1,12 @@
 class QuestionsController < ApplicationController
   def index
-    @message = flash.notice
     @questions = Question.order(created_at: :desc)
   end
 
   def show
-    @message = flash.notice
     @question = Question.find(params[:id])
+    @answers = @question.answers
+    @answer = Answer.new
   end
 
   def new
@@ -15,11 +15,14 @@ class QuestionsController < ApplicationController
 
   def create
     @question = Question.new(question_params)
+    require 'pry'
+    binding.pry
     if @question.save
       flash.notice = "Question created!"
       redirect_to questions_path
     else
-      @message = "Question not created"
+      flash.notice = "Question not created"
+
       render "new"
     end
   end
@@ -37,6 +40,15 @@ class QuestionsController < ApplicationController
       @message = "Question not updated"
       render "edit"
     end
+  end
+
+  def destroy
+    @question = Question.find(params[:id])
+    binding.pry
+    @question.answers.destroy
+    @question.destroy
+
+    redirect_to questions_path
   end
 
   def question_params
